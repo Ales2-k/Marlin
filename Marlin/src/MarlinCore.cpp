@@ -142,6 +142,10 @@
   #include "feature/tmc_util.h"
 #endif
 
+#if defined(SIMPLE_DRIVER_CONTROL)
+  #include "feature/simpledriver.h"
+#endif
+
 #if HAS_CUTTER
   #include "feature/spindle_laser.h"
 #endif
@@ -1243,6 +1247,11 @@ void setup() {
 
   #if ENABLED(HOST_PROMPT_SUPPORT)
     SETUP_RUN(host_action_prompt_end());
+  #endif
+
+  #if defined(SIMPLE_DRIVER_CONTROL)
+    SimpleDriver simple_drv;
+    SETUP_RUN(simple_drv.on_module_loaded());
   #endif
 
   #if HAS_TRINAMIC_CONFIG && DISABLED(PSU_DEFAULT_OFF)

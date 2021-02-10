@@ -625,6 +625,10 @@
   #include "stm32f4/pins_MKS_ROBIN2.h"          // STM32F4                                env:MKS_ROBIN2
 #elif MB(FYSETC_S6_V2_0)
   #include "stm32f4/pins_FYSETC_S6_V2_0.h"      // STM32F4                                env:FYSETC_S6
+#elif MB(SELENA_JUST_V2_1)
+  #include "stm32f4/pins_SELENA_JUST_V2_1.h"    // STM32F4                                env:SELENA_JUST_V2_1
+#elif MB(SELENA_CHERRY_V1_0)
+  #include "stm32f4/pins_SELENA_CHERRY_V1_0.h"  // STM32F4                                env:SELENA_JUST_V2_1
 
 //
 // ARM Cortex M7
